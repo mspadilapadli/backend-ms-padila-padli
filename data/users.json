@@ -1,0 +1,26 @@
+[
+    {
+        "username": "Merchant Alpha",
+        "email": "alpha@mail.com",
+        "password": "12345",
+        "role": "merchant"
+    },
+    {
+        "username": "Merchant Beta",
+        "email": "beta@mail.com",
+        "password": "12345",
+        "role": "merchant"
+    },
+    {
+        "username": "customer1",
+        "email": "customer1@mail.com",
+        "password": "12345",
+        "role": "customer"
+    },
+    {
+        "username": "padila",
+        "email": "padila@mail.com",
+        "password": "12345",
+        "role": "customer"
+    }
+]

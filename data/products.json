@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Buku Tulis",
+        "stock": 10,
+        "price": 10000,
+        "merchantId": 1
+    },
+    {
+        "name": "Pulpen",
+        "stock": 20,
+        "price": 3000,
+        "merchantId": 1
+    },
+    {
+        "name": "Tas",
+        "stock": 15,
+        "price": 50000,
+        "merchantId": 2
+    },
+    {
+        "name": "Penggaris",
+        "stock": 12,
+        "price": 4000,
+        "merchantId": 2
+    }
+]
