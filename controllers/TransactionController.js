@@ -6,9 +6,7 @@ class TransactionController {
             const { productId, quantity } = req.body;
             const product = await Product.findByPk(productId);
 
-            if (!product) {
-                return res.status(404).json({ message: "Product not found" });
-            }
+            if (!product) throw { name: "NotFound" };
 
             if (product.stock < quantity) {
                 return res.status(400).json({ message: "Insufficient stock" });
