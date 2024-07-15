@@ -1,6 +1,28 @@
 # Backend-MS-Padila-Padli
 
-## Models
+## Setup
+
+1. Clone repository ini.
+2. Install dependencies:
+    ```
+    npm install
+    ```
+3. Buat database PostgreSQL dan sesuaikan konfigurasi di `config/config.json`.
+4. Migrasi database:
+    ```
+    npx sequelize db:migrate
+    ```
+5. Jalankan server:
+
+    ```
+    nodemon app.js
+    OR
+    node --watch app.js
+    ```
+
+## API DOC
+
+### Models
 
 ### User
 
