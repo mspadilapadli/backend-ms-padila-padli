@@ -535,7 +535,7 @@ _Response (401 - Unauthorized)_
 
 ```json
 {
-    "message": "Invalid token"
+    "message": "Invalid token "
 }
 ```
 
