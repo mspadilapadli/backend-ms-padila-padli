@@ -4,15 +4,7 @@ const authorization = async (req, res, next) => {
     try {
         if (req.user.role === `merchant`) {
             next();
-        } else if (req.user.role === `customer`) {
-            let product = await Product.findByPk(req.params.id);
-            // console.log(product, "<<autorize");
-            if (!product) throw { name: "NotFound" };
-
-            if (product.merchantId !== req.user.id) throw { name: `Forbidden` };
-
-            next();
-        }
+        } else throw { name: `Forbidden` };
     } catch (error) {
         next(error);
         //     if (error.name === "NotFound") {

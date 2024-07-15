@@ -9,19 +9,14 @@ class UserController {
             let user = await User.create(req.body);
             // console.log(user);
 
-            res.status(201).json(user);
+            res.status(201).json({
+                message: "account has been created",
+                username: user.username,
+                email: user.email,
+            });
             // res.status(201).json({ message: ` has been created` });
         } catch (error) {
-            console.log(error.name);
             next(error);
-            // if (error.name === `SequelizeValidationError`) {
-            //     return res
-            //         .status(400)
-            //         .json({ message: error.errors.map((e) => e.message) });
-            // }
-            // // console.log(error);
-            // res.status(500).json({ message: `Internal Server Error` });
-            // res.status(500).json(error);
         }
     }
 
@@ -47,6 +42,14 @@ class UserController {
             });
         } catch (error) {
             console.log(error.name);
+            next(error);
+        }
+    }
+    static async getAllUsers(req, res, next) {
+        try {
+            const users = await User.findAll();
+            res.status(200).json(users);
+        } catch (error) {
             next(error);
         }
     }

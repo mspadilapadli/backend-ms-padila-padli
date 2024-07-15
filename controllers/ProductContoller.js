@@ -1,6 +1,5 @@
 const { Op } = require("sequelize");
-
-const { Product, User } = require("../models");
+const { Product } = require("../models");
 const axios = require("axios");
 class ProductController {
     static async addProduct(req, res, next) {
